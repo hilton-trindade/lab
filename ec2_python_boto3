@@ -1,0 +1,14 @@
+import boto3
+
+
+def create_ec2():
+    ec2_client = boto3.resource("ec2")
+    print(ec2_client.create_instances(
+        ImageId="ami-0b72821e2f351e396",
+        InstanceType="t2.micro",
+        MaxCount=1,
+        MinCount=1))
+
+
+if __name__ == "__main__":
+    create_ec2()
