@@ -1,0 +1,12 @@
+aws configure
+
+#AWS Access Key Id
+#AWS Secret Access Key
+#Default Region Name
+#Default output format
+
+================
+
+*After the EC2 launch python script is ready, go to the python file directory and execute:
+
+python ec2_launch.py
