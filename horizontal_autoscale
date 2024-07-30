@@ -1,0 +1,37 @@
+import boto3
+
+def autoscale_create():
+    autoscaling = boto3.client('autoscaling')
+
+
+    # autoscaling.create_launch_configuration(
+    #      LaunchConfigurationName="autoscale_configuration",
+    #      ImageId="image-id",
+    #      InstanceType="t2.micro",
+    #  )
+    #
+    #
+    # autoscaling.create_auto_scaling_group(
+    #  AutoScalingGroupName="autoscale_test",
+    #      LaunchConfigurationName="autoscale_configuration",
+    #      MinSize=2,
+    #      MaxSize=5,
+    #      DesiredCapacity=2,
+    #      AvailabilityZones=['us-east-2a'],
+    #  )
+    #
+    #
+    # autoscaling.put_scaling_policy(
+    #      AutoScalingGroupName="autoscale_test",
+    #      PolicyName="scale_metric",
+    #      PolicyType='TargetTrackingScaling',
+    #      TargetTrackingConfiguration={
+    #          'PredefinedMetricSpecification': {
+    #              'PredefinedMetricType': 'ASGAverageCPUUtilization'
+    #          },
+    #          'TargetValue': 75
+    #      }
+    #  )
+
+if __name__ == "__main__":
+    autoscale_create()
